@@ -1,0 +1,218 @@
+/* ==========================================
+   RESPONSIVE STYLES - Mobile First Approach
+   ========================================== */
+
+/* ==========================================
+   MOBILE STYLES (Base: 320px - 767px)
+   ========================================== */
+
+/* Already defined in main.css as base styles */
+
+/* ==========================================
+   TABLET STYLES (768px - 1023px)
+   ========================================== */
+
+@media (max-width: 1023px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* ==========================================
+   MOBILE STYLES (320px - 767px)
+   ========================================== */
+
+@media (max-width: 767px) {
+  /* Typography */
+  :root {
+    --text-hero: 32px;
+    --text-h1: 28px;
+    --text-h2: 24px;
+    --text-h3: 20px;
+    --text-h4: 18px;
+  }
+
+  /* Header & Navigation */
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .primary-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 30%;
+    background-color: var(--color-navy-primary);
+    flex-direction: column;
+    padding: var(--space-xl) var(--space-md);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
+
+  .primary-nav.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    padding: var(--space-sm) 0;
+  }
+
+  .header-contact {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-sm);
+    width: 100%;
+    margin-top: var(--space-md);
+  }
+
+  .header-phone {
+    text-align: center;
+    padding: var(--space-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: var(--space-lg) 0;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .trust-badges {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  /* Cards */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Sections */
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .section-lg {
+    padding: var(--space-xl) 0;
+  }
+
+  /* Content */
+  .content-split {
+    grid-template-columns: 1fr;
+  }
+
+  /* Forms */
+  .radio-group {
+    flex-direction: column;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: var(--space-md);
+  }
+
+  .timeline-item::before {
+    left: -29px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   DESKTOP LARGE (1440px+)
+   ========================================== */
+
+@media (min-width: 1440px) {
+  .hero-content h1 {
+    font-size: 56px;
+  }
+
+  .section-header h2 {
+    font-size: 42px;
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .hero-cta,
+  .btn,
+  form {
+    display: none;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+}
