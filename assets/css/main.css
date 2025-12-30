@@ -381,6 +381,7 @@ strong {
 .btn-primary:hover {
   background-color: var(--color-gold-hover);
   border-color: var(--color-gold-hover);
+  color: var(--color-navy-primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
 }
