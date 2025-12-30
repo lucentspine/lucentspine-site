@@ -191,23 +191,17 @@ strong {
 
 .site-logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
-.logo-name {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--color-white);
-  margin: 0;
-  text-decoration: none;
+.logo-link {
+  display: block;
 }
 
-.logo-subtitle {
-  font-size: 13px;
-  color: var(--color-gold-accent);
-  margin: 0;
-  font-weight: 400;
+.logo-image {
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
 }
 
 .primary-nav {
@@ -311,6 +305,15 @@ strong {
   height: auto;
   border-radius: 8px;
   box-shadow: var(--shadow-strong);
+}
+
+.hero-headshot {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-strong);
+  background-color: var(--color-gray-light);
 }
 
 .hero-content h1 {
@@ -625,8 +628,17 @@ textarea {
 .content-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 50%;
+  border-radius: 8px;
   box-shadow: var(--shadow-medium);
+}
+
+.about-headshot {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-medium);
+  background-color: var(--color-gray-light);
 }
 
 .hospital-list {
@@ -684,6 +696,10 @@ textarea {
 .footer-section a {
   color: var(--color-gray-light);
   font-size: var(--text-small);
+}
+
+.footer-section strong {
+  color: var(--color-white);
 }
 
 .footer-section a:hover {

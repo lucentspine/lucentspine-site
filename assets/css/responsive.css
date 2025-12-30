@@ -60,6 +60,15 @@
     flex-wrap: wrap;
   }
 
+  .logo-image {
+    height: 35px;
+  }
+
+  .hero-headshot,
+  .about-headshot {
+    max-width: 200px;
+  }
+
   .primary-nav {
     display: none;
     position: fixed;
